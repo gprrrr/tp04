@@ -12,6 +12,9 @@ jobs:
     permissions:
       pages: write
       id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
       - name: Checkout code
@@ -28,9 +31,6 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Configure remote
-        run: git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/$GITHUB_REPOSITORY
-
       - name: Deploy to GitHub Pages
-        run: npm run deploy
-
+        id: deployment
+        uses: actions/deploy-pages@v4
