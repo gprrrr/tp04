@@ -12,6 +12,7 @@ jobs:
     permissions:
       pages: write
       id-token: write
+
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -30,6 +31,12 @@ jobs:
 
       - name: Build
         run: npm run build
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v2
+        with:
+          name: github-pages
+          path: build
 
       - name: Deploy to GitHub Pages
         id: deployment
