@@ -29,8 +29,11 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Build
+      - name: App Build
         run: npm run build
+
+      - name: Pages build
+        run: npm run deploy
 
       - name: Upload Pages artifact
         uses: actions/upload-artifact@v4
