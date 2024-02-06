@@ -6,7 +6,7 @@ const App = () => (
     <div>
         <h1>Dino ! attempt</h1>
         <ChromeDinoGame />
-        <h1>this is after Merge request</h1>
+        <h1>this is after Merge request after MAJ</h1>
     </div>
 );
 
