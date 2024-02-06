@@ -6,6 +6,7 @@ const App = () => (
     <div>
         <h1>Dino ! attempt</h1>
         <ChromeDinoGame />
+        <h1>End</h1>
     </div>
 );
 
