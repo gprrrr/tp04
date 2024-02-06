@@ -4,7 +4,7 @@ import React from "react";
 
 const App = () => (
     <div>
-        <h1>Dino !</h1>
+        <h1>Dino ! attempt</h1>
         <ChromeDinoGame />
     </div>
 );
